@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: astrosun
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NVIDIA_NIM_API_KEY
+        sync: false
+      - key: NVIDIA_NIM_MODEL
+        sync: false
+      - key: NVIDIA_NIM_BASE_URL
+        value: https://integrate.api.nvidia.com/v1
+      - key: AIHUBMIX_API_KEY
+        sync: false
+      - key: AIHUBMIX_MODEL
+        sync: false
+      - key: AIHUBMIX_BASE_URL
+        sync: false
+      - key: NASA_API_KEY
+        sync: false
